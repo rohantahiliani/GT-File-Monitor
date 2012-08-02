@@ -1,0 +1,369 @@
+flawfinder src/
+Flawfinder version 1.27, (C) 2001-2004 David A. Wheeler.
+Number of dangerous functions in C/C++ ruleset: 160
+Examining src/helper.c
+Examining src/accessMode.h
+Examining src/accessPolicy.h
+Examining src/accessControl.c
+Examining src/main.cpp
+Examining src/logger.c
+Examining src/helper.h
+Examining src/accessPolicyParser.h
+Examining src/commonHeaders.h
+Examining src/accessControl.h
+Examining src/sysCallStructs.h
+Examining src/policyParser.c
+Examining src/logger.h
+src/accessControl.c:16:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/accessControl.c:19:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/accessControl.c:21:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination.
+  Consider using strncat or strlcat (warning, strncat is easily misused). 
+src/accessControl.c:28:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/accessControl.c:31:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/accessControl.c:33:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination.
+  Consider using strncat or strlcat (warning, strncat is easily misused). 
+src/helper.c:12:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:14:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification,
+  permits buffer overflows. Specify a limit to %s, or use a different input
+  function. 
+src/helper.c:42:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/helper.c:43:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:57:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/helper.c:58:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:60:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification,
+  permits buffer overflows. Specify a limit to %s, or use a different input
+  function. 
+src/helper.c:62:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/helper.c:76:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/helper.c:77:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:86:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/helper.c:87:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:91:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification,
+  permits buffer overflows. Specify a limit to %s, or use a different input
+  function. 
+src/helper.c:93:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/helper.c:125:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:147:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:149:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification,
+  permits buffer overflows. Specify a limit to %s, or use a different input
+  function. 
+src/helper.c:151:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/helper.c:161:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/helper.c:162:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/helper.c:164:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification,
+  permits buffer overflows. Specify a limit to %s, or use a different input
+  function. 
+src/helper.c:191:  [4] (shell) popen:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/logger.c:16:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/main.cpp:311:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/main.cpp:317:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/main.cpp:321:  [4] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. 
+src/main.cpp:352:  [4] (shell) execvp:
+  This causes a new program to execute and is difficult to use safely.
+  try using a library call that implements the same functionality if
+  available. 
+src/policyParser.c:119:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/policyParser.c:187:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/policyParser.c:218:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination.
+  Consider using strncpy or strlcpy (warning, strncpy is easily misused). 
+src/helper.c:7:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:11:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/helper.c:40:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:55:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:72:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:120:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:124:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/helper.c:145:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:146:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/helper.c:160:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:186:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/helper.c:190:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/logger.c:15:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/logger.c:23:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/logger.c:24:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/logger.c:25:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move
+  things around to create a race condition, control its ancestors, or change
+  its contents?. 
+src/main.cpp:64:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:67:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:73:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:90:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:93:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:100:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:134:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:135:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:141:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:143:  [2] (buffer) char:
+  Statically-sized arrays can be overflowed. Perform bounds checking,
+  use functions that limit length, or ensure that the size is larger than
+  the maximum possible length. 
+src/main.cpp:160:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range. 
+  If source untrusted, check both minimum and maximum, even if the input
+  had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended). 
+src/main.cpp:163:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:170:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:178:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:183:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:187:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:191:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:207:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:221:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:231:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:328:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:338:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:356:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/main.cpp:367:  [2] (buffer) sprintf:
+  Does not check for buffer overflows. Use snprintf or vsnprintf. Risk
+  is low because the source has a constant maximum length.
+src/accessControl.c:15:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:18:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:18:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:20:  [1] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination.
+  Consider using strncat or strlcat (warning, strncat is easily misused).
+  Risk is low because the source is a constant character.
+src/accessControl.c:27:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:30:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:30:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:32:  [1] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination.
+  Consider using strncat or strlcat (warning, strncat is easily misused).
+  Risk is low because the source is a constant character.
+src/accessControl.c:123:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:136:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:139:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/accessControl.c:145:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:15:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:22:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+src/helper.c:61:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:92:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:128:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:135:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+src/helper.c:150:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:194:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:200:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:201:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for
+  invalid pointers. 
+src/helper.c:201:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/helper.c:202:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/policyParser.c:118:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/policyParser.c:150:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/policyParser.c:186:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+src/policyParser.c:217:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated (it could cause a
+  crash if unprotected). 
+
+Hits = 104
+Lines analyzed = 1493 in 0.84 seconds (4353 lines/second)
+Physical Source Lines of Code (SLOC) = 1256
+Hits@level = [0]   0 [1]  28 [2]  40 [3]   0 [4]  36 [5]   0
+Hits@level+ = [0+] 104 [1+] 104 [2+]  76 [3+]  36 [4+]  36 [5+]   0
+Hits/KSLOC@level+ = [0+] 82.8025 [1+] 82.8025 [2+] 60.5096 [3+] 28.6624 [4+] 28.6624 [5+]   0
+Minimum risk level = 1
+Not every hit is necessarily a security vulnerability.
+There may be other security vulnerabilities; review your code!
+

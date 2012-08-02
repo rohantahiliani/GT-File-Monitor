@@ -1,0 +1,45 @@
+<Policy>
+<Permissions>
+	<Deny>
+		<!--This is a node by which we specify all negative or deny access rights-->
+		<file name="/home/machiry/Desktop/x86_Project/CppApplication_1/dist/Debug/GNU-Linux-x86/dummy.c"/>
+		<User name="machiry"/>
+		<Group ID="plugdev"/>
+		<Access mode="r"/>
+	</Deny>
+	<Deny>
+		<!--This is a node by which we specify all negative or deny access rights-->
+		<file name="/home/machiry/Desktop/x86_Project/CppApplication_1/dist/Debug/GNU-Linux-x86"/>
+		<User name="machiry"/>
+		<Group ID="plugdev"/>
+		<Access mode="w"/>
+	</Deny>
+	<Allow>
+		<!--This is a node by which we specify positive or allow access rights-->
+		<file name="/home/machiry/Desktop/x86_Project/CppApplication_1/dist/Debug/GNU-Linux-x86/ehw.txt"/>
+		<Group ID="adm"/>
+		<User name="machiry"/>
+		<Access mode="rw"/>
+	</Allow>
+	<Allow>
+		<!--This is a node by which we specify positive or allow access rights-->
+		<file name="/home/machiry/Desktop/scsTesting"/>
+		<User name="machiry"/>
+		<Access mode="rw"/>
+	</Allow>
+	<Allow>
+		<!--This is a node by which we specify positive or allow access rights-->
+		<file name="/home/machiry/Desktop/scsTesting/onlywrite"/>
+		<User name="machiry"/>
+		<Access mode="w"/>
+	</Allow>
+	<Allow>
+		<!--This is a node by which we specify positive or allow access rights-->
+		<file name="/home/machiry/Desktop/scsTesting/onlyread"/>
+		<User name="machiry"/>
+		<Access mode="r"/>
+	</Allow>
+	
+
+</Permissions>
+</Policy>
